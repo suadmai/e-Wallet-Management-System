@@ -3,7 +3,6 @@ import 'transaction.dart';
 
 //daus takeover
 
-
 void main(List<String> args) {
   //num balance = 100;
   int count = 0;
@@ -37,6 +36,17 @@ void main(List<String> args) {
 
   void c () {
     print("test");
+    
   }
+
+  void a() {
+  print("this is branch a");
+}
+
+void b(){
+  //this is a function from dausBranch
+}
   
 }
+
+
