@@ -35,5 +35,8 @@ void main(List<String> args) {
     // print("You made $count transactions today.");
   } while (true);
 
+  void c () {
+    print("test");
+  }
   
 }
