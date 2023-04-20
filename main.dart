@@ -1,7 +1,9 @@
 import 'dart:io';
 import 'transaction.dart';
 
-
+void a() {
+  print("this is branch a");
+}
 
 void main(List<String> args) {
   //num balance = 100;
@@ -33,6 +35,4 @@ void main(List<String> args) {
     // count++;
     // print("You made $count transactions today.");
   } while (true);
-
-  
 }
