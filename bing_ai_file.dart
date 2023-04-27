@@ -20,8 +20,8 @@ class EWallet {
 
   void makePayment(double amount) {
     var now = DateTime.now();
-    var offPeak = now.hour < 7 || now.hour > 21;
-    if (offPeak) {
+    var peakHour = now.hour > 11 && now.hour < 13; 
+    if (peakHour) {
       print("Congrats! You got 10% off due to peak hour bonus!!");
       amount *= 0.9;
     }
