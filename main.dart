@@ -34,9 +34,19 @@ void main(List<String> args) {
     // print("You made $count transactions today.");
   } while (true);
 
-  
+  void c () {
+    print("test");
+    
+  }
+
+  void a() {
+  print("this is branch a");
 }
 
 void b(){
   //this is a function from dausBranch
 }
+  
+}
+
+
