@@ -14,19 +14,16 @@ class EWallet {
   double balance = 0.0;
 
   void topUp(double amount) {
-    if (amount < 0) {
-      // window.alert("Invalid amount");
-      print("Invalid amount");
-      return;
-    }
-    if (amount == 0) {
-      // window.alert("Invalid amount");
-      print("Invalid amount");
-      return;
-    }
-    balance += amount + 0.50;
-    // window.alert("Top up successful. Current balance: \$${balance}");
-    print("Top up successful. Current balance: \$${balance}");
+  if (amount < 0) {
+    querySelector("#result").text = "Invalid amount";
+    return;
+  }
+  if (amount == 0) {
+    querySelector("#result").text = "Invalid amount";
+    return;
+  }
+  balance += amount + 0.50;
+  querySelector("#result").text = "Top up successful. Current balance: \$${balance}";
   }
 
   void makePayment(double amount) {
