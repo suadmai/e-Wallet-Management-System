@@ -1,9 +1,12 @@
 import 'dart:io';
 import 'transaction.dart';
+import 'dart:html';
 
 //daus takeover
 
 void main(List<String> args) {
+
+  querySelector('#testing').text = 'Your Dart app is running.';
   //num balance = 100;
   int count = 0;
 

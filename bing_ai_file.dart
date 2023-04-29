@@ -30,7 +30,9 @@ class EWallet {
     } else {
       balance -= amount;
       transactions.add(Transaction(balance, amount, now, balance));
-      print("Payment successful. Current balance: \$${balance}");
+      if(amount != 0){
+        print("Payment successful. Current balance: \$${balance}");
+      }
     }
   }
 
@@ -69,14 +71,33 @@ void main() {
         myEWallet.topUp(amount);
         break;
       case "2":
-        print("Enter the amount to pay:");
-        var amountStr = stdin.readLineSync();
-        if (amountStr == null) {
+        //print("Enter the amount to pay:");
+        var amountStr;
+
+        do{
+          
+          print("Enter the amount to pay:");
+          amountStr = stdin.readLineSync();
+          if (amountStr == null) {
           return;
-        }
+          }
+
+          if(double.parse(amountStr) > myEWallet.balance){
+            print("Insufficient funds");
+          }
+          else if(double.parse(amountStr) < 0){
+            print("Invalid amount");
+          }
+          else if(double.parse(amountStr) == 0){
+            break;
+          }
+          
+        }while(double.parse(amountStr) > myEWallet.balance || double.parse(amountStr) < 0);
+
         var amount = double.parse(amountStr);
         myEWallet.makePayment(amount);
         break;
+
       case "3":
         myEWallet.displayTransactions();
         break;
