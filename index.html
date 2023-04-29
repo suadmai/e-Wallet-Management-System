@@ -29,3 +29,24 @@
     <script src="https://dart.dev/web-components/dart_support.js"></script>
 </body>
 </html>
+
+
+<!-- To connect the above Dart file with an HTML file, you can create an HTML file and add a script tag to import the Dart file. Follow these steps:
+
+1. Create an HTML file and save it with a suitable name, for example, index.html.
+
+2. Inside the head section of the HTML file, add the following script tag to import the Dart file:
+
+html Copy code
+<script defer src="main.dart.js"></script>
+
+Note that the defer attribute is used to ensure that the script is executed after the HTML has finished parsing.
+
+3. Compile the Dart file to JavaScript using the following command:
+
+dart compile js -O2 -o main.dart.js main.dart
+
+
+Open the HTML file in a web browser to see the result.
+
+Note that you need to run the dart compile js command every time you make changes to the Dart file to update the compiled JavaScript file. -->
